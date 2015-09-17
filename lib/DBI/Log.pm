@@ -5,7 +5,7 @@ no strict;
 no warnings;
 use DBI;
 
-our $VERSION = "0.02";
+our $VERSION = "0.03";
 our $trace = 1;
 our $path = "STDERR";
 our $array;
@@ -184,9 +184,8 @@ a different location.
 
     $DBI::Log::path = "~/querylog.sql";
 
-The log is formatted as SQL, so if you look at it in an editor, the
-syntax will be highlighted correctly. This is what the output may look
-like:
+The log is formatted as SQL, so if you look at it in an editor, it
+might be highlighted. This is what the output may look like:
 
     -- Fri Sep 11 17:31:18 2015 taking 0 seconds
     -- execute t/test.t 18
@@ -214,6 +213,17 @@ will end up in @DBI::Log::queries.
 
 There is a built-in way to log with DBI, which can be enabled with
 DBI->trace(1), but the output is not easy to read through.
+
+This module integrates placeholder values into the query, so the
+log will contain valid queries.
+
+=head1 METACPAN
+
+L<https://metacpan.org/pod/DBI::Log>
+
+=head1 REPOSITORY
+
+L<https://github.com/zorgnax/dbilog>
 
 =head1 AUTHOR
 

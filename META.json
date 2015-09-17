@@ -22,9 +22,7 @@
    "prereqs" : {
       "build" : {
          "requires" : {
-            "DBD::SQLite" : "0",
-            "ExtUtils::MakeMaker" : "0",
-            "Test::More" : "0.88"
+            "ExtUtils::MakeMaker" : "0"
          }
       },
       "configure" : {
@@ -39,9 +37,22 @@
             "strict" : "0",
             "warnings" : "0"
          }
+      },
+      "test" : {
+         "requires" : {
+            "DBD::SQLite" : "0",
+            "Test::More" : "0.88"
+         }
       }
    },
    "release_status" : "stable",
-   "version" : "0.02",
+   "resources" : {
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/zorgnax/dbilog.git",
+         "web" : "https://github.com/zorgnax/dbilog"
+      }
+   },
+   "version" : "0.03",
    "x_serialization_backend" : "JSON::PP version 2.27203"
 }
